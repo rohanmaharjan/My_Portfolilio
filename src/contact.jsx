@@ -1,17 +1,30 @@
 import React from "react";
+import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import "./contact.css";
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-  // Backend removed — just show a placeholder message for now
-  alert("Form submission is disabled until an email service is added.");
-};
-
 const Contact = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_o605ykl",   // Service ID
+      "template_oxxlhyj",  // Template ID
+      e.target,
+      "tb_rfEmlH-Btnc4_8"    // Public Key
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+      e.target.reset(); // clear form after success
+    })
+    .catch(() => {
+      alert("Error sending message. Please try again.");
+    });
+  };
+
   return (
     <div className="contact-container" id="contact">
       <h1>Contact Me</h1>
@@ -47,7 +60,7 @@ const Contact = () => {
 
       <div className="contact-right">
         <h2>Message Me</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={sendEmail}>
           <input type="text" name="name" placeholder="Enter Name" required />
           <input type="email" name="email" placeholder="Enter Email" required />
           <textarea name="message" placeholder="Write Message" rows="5" required></textarea>
