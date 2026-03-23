@@ -1,0 +1,35 @@
+.project-container {
+  padding: 50px;
+  text-align: center;
+  background-color: #fffefe;
+  color: #150000;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+.project-item a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.project-item:hover {
+  transform: scale(1.2);
+}
+
+/* Logo */
+.project-item img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  margin: 0;
+  font-size: 16px;
+}
