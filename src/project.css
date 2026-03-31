@@ -29,6 +29,7 @@
   height: 150px;
   object-fit: cover;       /* fills the square box */
   display: block;
+  filter: blur(0.6px);
 }
 
 .project-item hr {
@@ -45,6 +46,8 @@
 
 .project-item:hover {
   transform: scale(1.05);
+  filter: blur(0.6px);
+  transition: filter 0.3s ease;
 }
 
 .overlay {
