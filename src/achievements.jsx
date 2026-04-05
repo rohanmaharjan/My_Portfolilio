@@ -10,7 +10,7 @@ const Achievements = () => {
   const certificate = [
     { src: hult, caption: "HULT PRIZE AT KhEC" },
     { src: aws, caption: "AWS FUNDAMENTALS WORKSHOP" },
-    { src: lumivya, caption: "ONE-Day BOOTCAMP" },
+    { src: lumivya, caption: "LUMIVYA WORKSHOP" },
   ];
 
   return (
