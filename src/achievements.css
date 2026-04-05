@@ -28,3 +28,21 @@
   align-items: center;
 }
 
+.achievements-item {
+  border: 2px solid whitesmoke;   /* outer box */
+  display: flex;
+  flex-direction: column;
+  background-color: #fffefe;
+  align-items: center;
+  overflow: hidden;
+  width: 250px;
+  cursor: pointer;
+  height: 150px;
+}
+
+.achievements-item img {
+  width: 250px;
+  height: 150px;
+  object-fit: cover;       /* fills the square box */
+  display: block;
+}

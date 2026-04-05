@@ -12,11 +12,11 @@ const Achievements = () => {
   ];
 
   return (
-    <div className="achievemnets-container" id="achievements">
+    <div className="achievements-container" id="achievements">
       <h1>ACHIEVEMENTS</h1>
       <div className='achievements-grid'>
         {certificate.map((proj, index) => (
-          <div>
+          <div className='achievements-item'>
             <img src={proj.src} alt={proj.caption} />
             <hr />
             <p>{proj.caption}</p>
