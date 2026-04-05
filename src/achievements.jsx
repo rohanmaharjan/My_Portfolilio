@@ -14,7 +14,7 @@ const Achievements = () => {
   return (
     <div className="achievemnets-container" id="achievements">
       <h1>ACHIEVEMENTS</h1>
-      <div>
+      <div className='achievements-grid'>
         {certificate.map((proj, index) => (
           <div>
             <img src={proj.src} alt={proj.caption} />

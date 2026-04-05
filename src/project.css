@@ -7,7 +7,7 @@
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 3 items per row */
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row */
   gap: 50px;
   justify-content: center;
   align-items: center;
