@@ -1,19 +1,28 @@
-import React from 'react'
-import './achievements.css'
+import React from 'react';
+import './achievements.css';
+import hult from './assets/hult.jpg';
+import aws from './assets/aws.jpg';
+import lumivya from './assets/lumivya.png';
 
 const Achievements = () => {
-  return (
-    <div className='achievements-container' id='achievements'>
-      <h1>Achievements</h1>
-      
-        <ul>
-            <li>3 Days Python Django Workshop at Vrrit Technologies, 31st January, 2025</li>
-            <li>Participated in HULT Prize at Khwopa Engineering College, 2023</li>
-            <li>Participated in AWS Fundamentals Workshop by KhEC Knowledge Sharing Circle with AWS cloud club at TU, 16th August, 2025</li>
-            <li>Participated in Lumivya Technology's 1-Day AI and Data Bootcamp: ATLAS ( Agentic Tools, LLMs, and Scalable Systems), 29th March, 2026</li>
-        </ul>
-      
+  const certificate = [
+    { src: hult, caption: "HULT PRIZE AT KhEC" },
+    { src: aws, caption: "AWS FUNDAMENTALS WORKSHOP" },
+    { src: lumivya, caption: "ONE-Day BOOTCAMP" },
+  ];
 
+  return (
+    <div className="achievemnets-container" id="achievements">
+      <h1>ACHIEVEMENTS</h1>
+      <div>
+        {certificate.map((proj, index) => (
+          <div>
+            <img src={proj.src} alt={proj.caption} />
+            <hr />
+            <p>{proj.caption}</p>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
