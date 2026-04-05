@@ -26,6 +26,7 @@
   gap: 50px;
   justify-content: center;
   align-items: center;
+  margin-left: 75px;
 }
 
 .achievements-item {
@@ -46,3 +47,4 @@
   object-fit: cover;       /* fills the square box */
   display: block;
 }
+
