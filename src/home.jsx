@@ -1,15 +1,23 @@
 import React from "react";
 import "./home.css";
 
-//component declaration for home
 const Home = () => {
-    return (
-        <div className="home-container" id="home">
-            <h1>I'M ROHAN MAHARJAN</h1>
-        </div>
-        
-    )
-}
+  const text = "I'M ROHAN MAHARJAN.";
+
+  return (
+    <div className="home-container" id="home">
+      <h1 className="animated-text">
+        {text.split("").map((char, index) => (
+          <span
+            key={index}
+            style={{ animationDelay: `${index * 0.1}s` }}
+          >
+            {char === " " ? "\u00A0" : char}
+          </span>
+        ))}
+      </h1>
+    </div>
+  );
+};
 
 export default Home;
-
