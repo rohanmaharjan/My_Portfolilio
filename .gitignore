@@ -24,3 +24,5 @@ yarn-error.log*
 
 process.env
 .env
+
+/assets
