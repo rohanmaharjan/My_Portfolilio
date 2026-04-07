@@ -9,10 +9,10 @@ const Project = () => {
   const [zoomedImage, setZoomedImage] = useState(null);
 
   const projects = [
-    { src: vegScan, caption: "Vegscan" },
-    { src: honeyPot, caption: "HoneyPot System" },
-    { src: dictionary, caption: "English Dictionary" },
-    { src: gymPic, caption: "Gym Management System" },
+    { id:1, src: vegScan, caption: "Vegscan" },
+    { id:2, src: honeyPot, caption: "HoneyPot System" },
+    { id:3, src: dictionary, caption: "English Dictionary" },
+    { id:4, src: gymPic, caption: "Gym Management System" },
   ];
 
   return (
@@ -21,7 +21,7 @@ const Project = () => {
       <div className="project-grid">
         {projects.map((proj, index) => (
           <div
-            key={index}
+            key={proj.id}
             className="project-item"
             onClick={() => setZoomedImage(proj.src)}
           >

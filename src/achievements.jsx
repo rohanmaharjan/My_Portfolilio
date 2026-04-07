@@ -8,9 +8,9 @@ const Achievements = () => {
   const [ zoomedImages, setZoomedImages ] = useState(null);
 
   const certificate = [
-    { src: hult, caption: "HULT PRIZE AT KhEC" },
-    { src: aws, caption: "AWS FUNDAMENTALS WORKSHOP" },
-    { src: lumivya, caption: "LUMIVYA WORKSHOP" },
+    { id:1, src: hult, caption: "HULT PRIZE AT KhEC" },
+    { id:2, src: aws, caption: "AWS FUNDAMENTALS WORKSHOP" },
+    { id:3, src: lumivya, caption: "LUMIVYA WORKSHOP" },
   ];
 
   return (
@@ -18,7 +18,7 @@ const Achievements = () => {
       <h1>ACHIEVEMENTS</h1>
       <div className='achievements-grid' >
         {certificate.map((proj, index) => (
-          <div className='achievements-item' onClick={() => setZoomedImages(proj.src)}>
+          <div className='achievements-item' onClick={() => setZoomedImages(proj.src)} key={proj.id}>
             <img src={proj.src} alt={proj.caption} />
             <hr />
             <p>{proj.caption}</p>
