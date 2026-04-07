@@ -37,3 +37,21 @@
 .navbar-right .nav-links li a:hover {
   color: #ff0000;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px; /* reduce side spacing */
+  }
+
+  .navbar-left h1 {
+    font-size: 20px;
+  }
+
+  .navbar-right .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+}

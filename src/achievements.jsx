@@ -16,7 +16,7 @@ const Achievements = () => {
   return (
     <div className="achievements-container" id="achievements">
       <h1>ACHIEVEMENTS</h1>
-      <div className='achievements-grid'>
+      <div className='achievements-grid' >
         {certificate.map((proj, index) => (
           <div className='achievements-item' onClick={() => setZoomedImages(proj.src)}>
             <img src={proj.src} alt={proj.caption} />
